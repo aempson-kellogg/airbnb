@@ -5,3 +5,8 @@
 -- +----------+
 
 
+SELECT COUNT(id)
+
+FROM    listings
+
+WHERE   listings.neighborhood == 'Lincoln Park'

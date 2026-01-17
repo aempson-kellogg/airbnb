@@ -13,3 +13,13 @@
 -- +-------------------------------------+----------+
 
 
+SELECT 
+        property_type
+        , COUNT(id)
+
+FROM    listings
+
+WHERE   listings.neighborhood == 'Hyde Park'
+
+GROUP BY property_type
+

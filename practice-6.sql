@@ -16,3 +16,14 @@
 -- | Burnside               | 10       |
 
 
+SELECT 
+        neighborhood
+        , COUNT(B.id)
+
+FROM    listings AS A
+        LEFT JOIN reviews AS B
+        ON A.id = B.listing_id
+
+GROUP BY neighborhood
+
+ORDER BY A.neighborhood ASC
